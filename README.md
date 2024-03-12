@@ -498,17 +498,14 @@ chmod +x
 | clock  | 561828    | 32.883      | 5.155   |
 | 2Q     | 470364    | 43.501      | 2.854   |
 
-<img src="buffer-pool-manager-lab/policy-1669212439748.svg" alt="policy" style="zoom: 33%;" />
-
-在4个线程并行执行情况下测试不同替换策略性能，得到的结果与单线程一致。
-
-<img src="buffer-pool-manager-lab/policy_4.svg" alt="policy_4" style="zoom:33%;" />
+<img src="media/image1.png" alt="policy" style="zoom: 33%;" />
+![alt text](image.png)
 
 ### 多线程运行
 
 以LRU算法为例，测试不同线程并发执行情况下缓存管理器的命中率、I/O次数以及运行时间。得到结果如下图所示：
 
-<img src="buffer-pool-manager-lab/lru.svg" alt="lru" style="zoom:33%;" />
+<img src="media/image2.png" alt="lru" style="zoom:33%;" />
 
 可以看出多线程并没有提高程序的运行速度，甚至有所下降，因为每次执行页面请求时都可能会因为缓存访问冲突而阻塞，而且多个线程的开销也会比较大。LRU的平均命中率基本维持在34%左右，当命中率提高时可以看到明显的I/O次数下降。
 
