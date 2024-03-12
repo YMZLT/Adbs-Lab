@@ -499,7 +499,6 @@ chmod +x
 | 2Q     | 470364    | 43.501      | 2.854   |
 
 <img src="media/image1.png" alt="policy" style="zoom: 33%;" />
-![alt text](image.png)
 
 ### 多线程运行
 
