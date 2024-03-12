@@ -2,6 +2,29 @@
 
 中科大高级数据库大作业——缓冲管理器
 
+## 目录说明
+
+- src/：缓冲区管理器的类代码，编译成一个库
+- test/：测试代码，用于测试命中率等
+
+
+```shell
+data
+└── data-5w-50w-zipf.txt        # data file 包含了50万次满足Zipfan分布-0.8的页面请求
+include
+├── BMgr.h                      # buffer manager
+├── cmdline.h                   # argument parser
+├── Common.h
+├── DSMgr.h                     # data storeage manager
+└── ReplaceAlg.h                # replace algorithm base class
+src
+├── main.cpp                    
+├── BMgr.cpp
+├── DSMgr.cpp
+└── ReplaceAlg.cpp
+
+```
+
 ## 实验目的
 
 为了了解数据库Buffer的工作原理，对数据库底层有个更加深入的了解，实现一个简单的模拟的缓冲管理器，本次试验涉及到缓冲管理器，缓冲技术，散列技术，文件存储结构，磁盘空间等。
