@@ -1,0 +1,19 @@
+echo "-----------------Test start---------------------"
+echo `date`
+echo -e "\n"
+
+for p in "lru" "clock" "2Q"
+do
+    for t in 1 4 8 12 16
+    do
+        echo "###################################################"
+        echo "replacement policy: "${p}
+        echo "thread number     : "${t}
+        echo -e "\n"
+        ./build/main -p ${p} -t ${t}
+        echo -e "\n"
+    done
+done
+echo -e "\n"
+echo `date`
+echo "----------------------Test end------------------------"

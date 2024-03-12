@@ -1,0 +1,21 @@
+【linux 操作系统下】
+
+1.编译
+
+mkdir build && cd build/
+
+cmake .. && make
+
+2.运行
+
+./main -p lru -t 2
+
+可以使用 ./main --help 查看命令详解
+
+3. 自动测试
+
+在根目录下的文件"run"为自动测试脚本，运行以下命令即可测试不同算法在不同线程下的执行情况。
+
+chmod +x
+
+./run > run.log
